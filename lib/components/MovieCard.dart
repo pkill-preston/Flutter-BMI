@@ -15,24 +15,30 @@ class MovieCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        height: screenHeight * 0.2,
-        width: screenWidth * 0.40,
+        decoration: BoxDecoration(
+          color: Color(0xff1e1e1e),
+          borderRadius: BorderRadius.circular(10.0)
+        ),
+        width: screenWidth * 0.4,
+        height: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(icon, size: 80.0, color: Color(0xff7EF4ED)),
-            Text(text,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Icon(
+              icon,
+              size: 70,
+              color: Color(0xff7EF4ED),
+            ),
+            Text(
+              text,
               style: TextStyle(
                 fontSize: 40,
                 color: Colors.white
-              ),)
+              ),
+            ),
           ],
-        ),
-        margin: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Color(0xff1E1E1E),
-          borderRadius: BorderRadius.circular(10.0),
         ),
       ),
     );
